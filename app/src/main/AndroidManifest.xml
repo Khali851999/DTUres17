@@ -3,8 +3,8 @@
     package="com.example.sachin.dtures">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/dtureslogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PIE"></activity>
+        <activity android:name=".MC" />
+        <activity android:name=".MAM" />
         <activity
             android:name=".splashScreen"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
@@ -71,21 +74,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ECE" >
+        <activity android:name=".ECE">
             <intent-filter>
                 <action android:name="com.example.sachin.dtures.ECE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".EE" >
+        <activity android:name=".EE">
             <intent-filter>
                 <action android:name="com.example.sachin.dtures.EE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ME" >
+        <activity android:name=".ME">
             <intent-filter>
                 <action android:name="com.example.sachin.dtures.ME" />
 

@@ -30,8 +30,18 @@ public class dtuHome extends Fragment implements View.OnClickListener {
     private CardView Sowftware;
     private CardView ECE;
     private CardView Placements;
-    private CardView MCE;
+    private CardView ME;
     private CardView EE;
+    private CardView MAM;
+    private CardView MC;
+    private CardView PIE;
+    private CardView EP;
+    private CardView ENE;
+    private CardView PCT;
+    private CardView CE;
+    private CardView BT;
+
+
     private CardView Syllabus;
 
     BottomNavigationView bottomNavigationView;
@@ -56,7 +66,17 @@ public class dtuHome extends Fragment implements View.OnClickListener {
         ECE=v.findViewById(R.id.ECE);
         EE=v.findViewById(R.id.ee);
         Placements=v.findViewById(R.id.placement);
-        MCE=v.findViewById(R.id.me);
+        MAM=v.findViewById(R.id.mam);
+        MC=v.findViewById(R.id.MC);
+        PCT=v.findViewById(R.id.PCT);
+        BT=v.findViewById(R.id.BT);
+        ENE=v.findViewById(R.id.ENE);
+        EP=v.findViewById(R.id.EP);
+        PIE=v.findViewById(R.id.PIE);
+        CE=v.findViewById(R.id.CE)  ;
+        ME=v.findViewById(R.id.me);
+
+
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -101,9 +121,19 @@ public class dtuHome extends Fragment implements View.OnClickListener {
         InformationTechnology.setOnClickListener(this);
         Sowftware.setOnClickListener(this);
         ECE.setOnClickListener(this);
-        MCE.setOnClickListener(this);
         EE.setOnClickListener(this);
         Placements.setOnClickListener(this);
+        MAM.setOnClickListener(this);
+        MC.setOnClickListener(this);
+        PIE.setOnClickListener(this);
+        EP.setOnClickListener(this);
+        ENE.setOnClickListener(this);
+        PCT.setOnClickListener(this);
+        CE.setOnClickListener(this);
+        BT.setOnClickListener(this);
+        ME.setOnClickListener(this);
+
+
         return v;
     }
 
@@ -290,8 +320,169 @@ public class dtuHome extends Fragment implements View.OnClickListener {
                 }
 
             }
+        else if (view.getId()==R.id.PIE){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.PIE");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.PIE");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.PIE");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.PIE");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
 
         }
+        else if (view.getId()==R.id.MC){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.PIE");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.MC");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.MC");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.MC");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
+
+        }
+        else if (view.getId()==R.id.PCT){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.PCT");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.PCT");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.PCT");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.PCT");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
+
+        }
+        else if (view.getId()==R.id.mam){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.MAM");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.MAM");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.MAM");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.MAM");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
+
+        } else if (view.getId()==R.id.CE){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.CE");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.CE");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.CE");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.CE");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
+
+        }
+        else if (view.getId()==R.id.BT){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.BT");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.BT");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.BT");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.BT");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
+
+        }
+        else if (view.getId()==R.id.EP){
+            if (isbooks){
+                Intent intent=new Intent("com.example.sachin.dtures.EP");
+                intent.putExtra("type","Books");
+                startActivity(intent);
+            }
+            else if (isnotes){
+                Intent intent=new Intent("com.example.sachin.dtures.EP");
+                intent.putExtra("type","Notes");
+                startActivity(intent);
+            }
+            else if (ispaper) {
+                Intent intent = new Intent("com.example.sachin.dtures.EP");
+                intent.putExtra("type", "Question Paper");
+                startActivity(intent);
+            }
+            else if (ispractical) {
+                Intent intent = new Intent("com.example.sachin.dtures.EP");
+                intent.putExtra("type", "Practicals");
+                startActivity(intent);
+            }
+
+        }
+
+
+    }
 
     }
 

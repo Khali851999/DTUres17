@@ -112,5 +112,4 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
     }
 }
 
-
 */

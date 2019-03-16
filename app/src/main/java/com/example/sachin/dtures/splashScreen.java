@@ -17,6 +17,6 @@ public class splashScreen extends Activity {
                 startActivity(new Intent("com.example.sachin.dtures.Home"));
                 finish();
             }
-        },700);
+        },500);
     }
 }

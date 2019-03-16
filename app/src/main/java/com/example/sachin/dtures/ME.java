@@ -22,7 +22,7 @@ public class ME extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_me);
+        setContentView(R.layout.activity_coe);
         final ArrayList<abcd> subject=new ArrayList<>();
         subject.add(new abcd("papa","dad",R.drawable.computerblack));
         subject.add(new abcd("Ma","Mom",R.drawable.computerblack));

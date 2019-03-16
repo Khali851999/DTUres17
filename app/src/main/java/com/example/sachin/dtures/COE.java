@@ -28,7 +28,7 @@ public class COE extends AppCompatActivity {
         setContentView(R.layout.activity_coe);
         type=getIntent().getStringExtra("type");
         final ArrayList<abcd> subject=new ArrayList<>();
-        subject.add(new abcd("papa","dad",R.drawable.computerblack));
+        subject.add(new abcd("papaKABETA","dad",R.drawable.computerblack));
         subject.add(new abcd("Ma","Mom",R.drawable.computerblack));
         subject.add(new abcd("Beta","Son",R.drawable.computerblack));
         subject.add(new abcd("Beti","Daughter",R.drawable.computerblack));
