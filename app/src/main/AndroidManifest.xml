@@ -13,9 +13,6 @@
         android:roundIcon="@mipmap/dtureslogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PIE"></activity>
-        <activity android:name=".MC" />
-        <activity android:name=".MAM" />
         <activity
             android:name=".splashScreen"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
@@ -102,6 +99,65 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".PCT">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.PCT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PIE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.PIE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.CE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EP">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.EP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ENE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.ENE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BT">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.BT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MAM">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.MAM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MC">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.MC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
