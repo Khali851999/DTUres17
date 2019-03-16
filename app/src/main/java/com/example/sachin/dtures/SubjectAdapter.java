@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+/*
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder> {
     String branch;
     String[] sublist;
@@ -30,7 +30,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
     @Override
     public SubjectViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater=LayoutInflater.from(viewGroup.getContext());
-        View view=inflater.inflate(R.layout.listofsubjects,viewGroup,false);
+       View view=inflater.inflate(R.layout.listofsubjects,viewGroup,false);
         return new SubjectViewHolder(view);
     }
 
@@ -111,3 +111,6 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         }
     }
 }
+
+
+*/

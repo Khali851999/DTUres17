@@ -1,5 +1,6 @@
 package com.example.sachin.dtures;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class COE extends AppCompatActivity {
 
@@ -20,37 +26,28 @@ public class COE extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coe);
-        Toolbar toolbar=findViewById(R.id.toolbarsubjectcoe);
-        setSupportActionBar(toolbar);
         type=getIntent().getStringExtra("type");
-        subjectrecyclerView=findViewById(R.id.subjectRecyclerViewcoe);
-        subjectrecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        subjectrecyclerView.setAdapter(new branchSubjectAdapter(semthreesub,type));
+        final ArrayList<abcd> subject=new ArrayList<>();
+        subject.add(new abcd("papa","dad",R.drawable.computerblack));
+        subject.add(new abcd("Ma","Mom",R.drawable.computerblack));
+        subject.add(new abcd("Beta","Son",R.drawable.computerblack));
+        subject.add(new abcd("Beti","Daughter",R.drawable.computerblack));
+        subject.add(new abcd("nani","grandmom",R.drawable.computerblack));
+        subject.add(new abcd("nana","granddad",R.drawable.computerblack));
+
+        ListView list=(ListView) findViewById(R.id.lvf);
+        wordextender item=new wordextender(this,subject);
+        list.setAdapter(item);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                abcd word=subject.get(position);
+                //Jo Karna Hai aage;
+            }
+        });
+
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.semestermenu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.semester3:
-                loadsemthreesub();
-                 break;
-            case  R.id.semester4:
-                  loadsemfoursub();
-                 break;
-        }
-        return true;
-    }
-    void loadsemthreesub(){
-        subjectrecyclerView.setAdapter(new branchSubjectAdapter(semthreesub,type));
-    }
-    void loadsemfoursub(){
-        subjectrecyclerView.setAdapter(new branchSubjectAdapter(semfoursub,type));
-    }
 }

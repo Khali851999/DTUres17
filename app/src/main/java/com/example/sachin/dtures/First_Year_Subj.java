@@ -4,6 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class First_Year_Subj extends AppCompatActivity {
 
@@ -15,16 +20,24 @@ public class First_Year_Subj extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first__year__subj);
         String type=getIntent().getStringExtra("type");
-        subjectrecyclerView=findViewById(R.id.subjectRecyclerView);
-        subjectrecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        String []subjectslist={"Electrical","Computer","Environment","Mechanical","Mathematics","Engineering Drawing","Physics","Chemistry","English"};
-        String []subjectsdescriptions={"Electrical Engineers do it with more frequency","You can love it or hate it","Mother Nature","Don't know","God is Greatest Mathematician","Art will never live you","I love it","Half truth","Without any reason"};
-        int []subjectimgids={R.mipmap.electricalcon,R.mipmap.computerscienceicon,R.mipmap.iticonpng,R.mipmap.mechanicalicon,
-                R.drawable.software,R.mipmap.eceiconpng,R.mipmap.softicon,R.mipmap.csicon,R.mipmap.eceiconpng,R.drawable.software,
-                R.drawable.software
+        final ArrayList<abcd> subject = new ArrayList<>();
+        subject.add(new abcd("papa", "dad", R.drawable.computerblack));
+        subject.add(new abcd("Ma", "Mom", R.drawable.computerblack));
+        subject.add(new abcd("Beta", "Son", R.drawable.computerblack));
+        subject.add(new abcd("Beti", "Daughter", R.drawable.computerblack));
+        subject.add(new abcd("nani", "grandmom", R.drawable.computerblack));
+        subject.add(new abcd("nana", "granddad", R.drawable.computerblack));
 
-        };
-        subjectrecyclerView.setAdapter(new SubjectAdapter("FirstYear",subjectslist,subjectsdescriptions,subjectimgids,type));
+        ListView list = (ListView) findViewById(R.id.lvf);
+        wordextender item = new wordextender(this, subject);
+        list.setAdapter(item);
 
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                abcd word = subject.get(position);
+                //Jo Karna Hai aage;
+            }
+        });
     }
 }

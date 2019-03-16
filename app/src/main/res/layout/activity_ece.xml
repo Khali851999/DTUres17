@@ -19,10 +19,14 @@
             android:textSize="23dp"
             android:textColor="#ffff"/>
     </android.support.v7.widget.Toolbar>
-    <android.support.v7.widget.RecyclerView
+    <ListView
+        android:id="@+id/lvf"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/subjectRecyclerViewece">
+        tools:context=".family"
+        android:background="#c5d8ea">
 
-    </android.support.v7.widget.RecyclerView>
+    </ListView>
 </LinearLayout>

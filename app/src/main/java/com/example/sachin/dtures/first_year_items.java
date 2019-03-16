@@ -46,7 +46,7 @@ public class first_year_items extends AppCompatActivity {
         setContentView(R.layout.activity_first_year_items);
         Toolbar toolbar = findViewById(R.id.toolbarfirstyearitems);
         setSupportActionBar(toolbar);
-
+/*
         toolbaritem=findViewById(R.id.toolbarfirstyearitemstitle);
         itemtype=getIntent().getStringExtra("type");
         itemsubject=getIntent().getStringExtra("subject");
@@ -74,7 +74,7 @@ public class first_year_items extends AppCompatActivity {
             TextView textView=bookView.findViewById(R.id.booktitle);
             textView.setText(booktitle);
         }
-        
+
     }
 
     @Override
@@ -387,6 +387,9 @@ public class first_year_items extends AppCompatActivity {
 
             bookrecyclerViewitems.setAdapter(booksBookViewholderFirebaseRecyclerAdapter);
         }
+        */
     }
 
 }
+
+
