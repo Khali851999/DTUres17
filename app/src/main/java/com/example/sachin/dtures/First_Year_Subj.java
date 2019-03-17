@@ -39,5 +39,23 @@ public class First_Year_Subj extends AppCompatActivity {
                 //Jo Karna Hai aage;
             }
         });
+        final ArrayList<abcd> subject2=new ArrayList<>();
+        subject2.add(new abcd("papaKABETA","dad",R.drawable.computerblack));
+        subject2.add(new abcd("Ma","Mom",R.drawable.computerblack));
+        subject2.add(new abcd("Beta","Son",R.drawable.computerblack));
+        subject2.add(new abcd("Beti","Daughter",R.drawable.computerblack));
+        subject2.add(new abcd("nani","grandmom",R.drawable.computerblack));
+        subject2.add(new abcd("nana","granddad",R.drawable.computerblack));
+        ListView list2=findViewById(R.id.lvf2);
+        wordextender item2=new wordextender(this,subject2);
+        list2.setAdapter(item2);
+
+        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                abcd word=subject2.get(position);
+                //Jo Karna Hai aage;
+            }
+        });
     }
 }
